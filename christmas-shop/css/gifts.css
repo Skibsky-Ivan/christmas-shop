@@ -63,6 +63,14 @@
   margin-bottom: 8px;
 }
 
+.gifts .card .header_3 {
+  transition: all 0.4s ease;
+}
+
+.gifts .card:hover {
+  color: var(--primary);
+}
+
 .card.for_work .header_4 {
   color: var(--tag-purple);
 }
@@ -73,9 +81,5 @@
 
 .card.for_health .header_4 {
   color: var(--tag-pink);
-}
-
-.gifts .card:hover {
-  color: var(--primary);
 }
 /* gifts style end */

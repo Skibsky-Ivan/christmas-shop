@@ -145,7 +145,6 @@
   flex-direction: column;
   width: 310px;
   border-radius: 20px;
-  border: none;
   text-align: start;
   cursor: pointer;
   background: var(--content-background);
@@ -163,6 +162,14 @@
   margin-bottom: 8px;
 }
 
+.card .header_3 {
+  transition: all 0.4s ease;
+}
+
+.card:hover .header_3 {
+  color: var(--primary);
+}
+
 .card.for_work .header_4 {
   color: var(--tag-purple);
 }
@@ -173,10 +180,6 @@
 
 .card.for_health .header_4 {
   color: var(--tag-pink);
-}
-
-.card:hover {
-  color: var(--primary);
 }
 /* best_gifts style end */
 

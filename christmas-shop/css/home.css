@@ -1,0 +1,236 @@
+/* gifts styles start*/
+.gifts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    url(../img/img-compressed/img-compressed/bg-snow.png) no-repeat,
+    url(../img/img-compressed/img-compressed/bg-ball.png) no-repeat;
+  background-size: 1440px;
+  background-position: 0 -40px;
+  color: var(--static-white);
+}
+
+.gifts_content {
+  max-width: 426px;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.gifts_content .caption {
+  margin-bottom: 20px;
+}
+/* gifts styles end*/
+
+/* about__us style start */
+.about_container {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color: var(--static-white);
+}
+
+.about_content {
+  flex: 1;
+  padding: 0px 60px;
+}
+
+.about_content div {
+  max-width: 426px;
+  padding: 60px 0;
+}
+
+.about_content .caption {
+  color: var(--primary);
+}
+
+.about_content .item {
+  margin-bottom: 20px;
+}
+
+.about_container img {
+  border-radius: 20px;
+}
+/* about__us style end */
+
+/* become__happier style start */
+.slider {
+  text-align: center;
+  color: var(--static-white);
+}
+
+.slider .caption {
+  margin-bottom: 12px;
+}
+
+.slider .ticker {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.slider .ticker img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.slider .buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.slider .buttons button {
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  background: none;
+  cursor: pointer;
+  border: 1px solid var(--static-white-40);
+}
+
+.slider .buttons svg {
+  stroke: var(--static-white-40);
+}
+
+.slider .buttons path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.slider .buttons button:active {
+  border: 1px solid var(--static-white);
+  background: none;
+}
+
+.slider .buttons button:active path {
+  stroke: var(--static-white);
+}
+
+.slider button:hover {
+  background-color: var(--static-white);
+}
+
+.slider button:hover path {
+  stroke: var(--primary);
+}
+
+.slider .item {
+  margin-bottom: 20px;
+}
+/* become__happier style end */
+
+/* best_gifts style start */
+.best_gifts {
+  text-align: center;
+  color: var(--static-white);
+}
+
+.best_gifts .caption {
+  margin-bottom: 12px;
+}
+.best_gifts .header_2 {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  border-radius: 20px;
+  text-align: start;
+  cursor: pointer;
+  background: var(--content-background);
+  color: var(--dark);
+}
+
+.card .title {
+  flex: 1;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--static-white);
+}
+
+.card .header_4 {
+  margin-bottom: 8px;
+}
+
+.card .header_3 {
+  transition: all 0.4s ease;
+}
+
+.card:hover .header_3 {
+  color: var(--primary);
+}
+
+.card.for_work .header_4 {
+  color: var(--tag-purple);
+}
+
+.card.for_harmony .header_4 {
+  color: var(--tag-green);
+}
+
+.card.for_health .header_4 {
+  color: var(--tag-pink);
+}
+/* best_gifts style end */
+
+/* new_year_timer style start */
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    url(../img/img-compressed/img-compressed/bg-snow.png) no-repeat,
+    url(../img/img-compressed/img-compressed/bg-forest.png) no-repeat;
+  background-size: 1440px;
+  background-position: 0 1px;
+  color: var(--static-white);
+}
+
+.timer_container {
+  padding: 60px 0;
+}
+
+.timer_content {
+  padding: 60px 0;
+  text-align: center;
+  max-width: 426px;
+}
+
+.timer__new_year {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 8px 12px 12px;
+  border-radius: 20px;
+  background: var(--static-white-40);
+}
+
+.timer__new_year div {
+  width: 80px;
+  height: 52px;
+  position: relative;
+}
+
+.timer__new_year div:not(:last-child)::after {
+  content: '|';
+  position: absolute;
+  right: -3px;
+  top: 25%;
+  color: var(--static-white-40);
+  font-size: 18px;
+}
+
+.timer .caption {
+  margin-bottom: 8px;
+}
+/* timer__new_year style end */

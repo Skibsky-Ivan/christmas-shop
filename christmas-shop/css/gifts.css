@@ -1,0 +1,81 @@
+/* gifts style start */
+.gifts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: var(--static-white);
+  background: url(../img/img-compressed/img-compressed/bg-garland.png) no-repeat;
+  background-size: 1440px;
+}
+
+.gifts .header_1 {
+  max-width: 426px;
+  text-align: center;
+}
+
+.gifts .filter {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+
+.gifts .filter button {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: var(--static-white);
+}
+
+.filter button:hover,
+.filter button:active {
+  background: var(--static-white-20);
+}
+
+.gifts .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gifts .card {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  border-radius: 20px;
+  border: none;
+  text-align: start;
+  cursor: pointer;
+  background: var(--content-background);
+  color: var(--dark);
+}
+
+.gifts .card .title {
+  flex: 1;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--static-white);
+}
+
+.gifts .card .header_4 {
+  margin-bottom: 8px;
+}
+
+.card.for_work .header_4 {
+  color: var(--tag-purple);
+}
+
+.card.for_harmony .header_4 {
+  color: var(--tag-green);
+}
+
+.card.for_health .header_4 {
+  color: var(--tag-pink);
+}
+
+.gifts .card:hover {
+  color: var(--primary);
+}
+/* gifts style end */

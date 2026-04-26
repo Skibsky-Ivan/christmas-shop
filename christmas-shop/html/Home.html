@@ -3,54 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style_home.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/home.css" />
     <title>christmas-shop</title>
   </head>
   <body>
-    <div class="wrapper__site">
+    <div class="wrapper_site">
       <header class="header header_4 wrapper">
-        <div class="header__logo">
+        <div class="header_logo">
           <a href="./Home.html">
-            <img src="/img/logo.svg" alt="logo" />
+            <img src="../img/logo.svg" alt="logo" />
             the gifts
           </a>
         </div>
 
-        <nav class="header__nav">
+        <nav class="header_nav">
           <ul>
-            <li>
-              <a href="">gifts</a>
-            </li>
-            <li>
-              <a href="">about</a>
-            </li>
-            <li>
-              <a href="">best</a>
-            </li>
-            <li>
-              <a href="">contacts</a>
-            </li>
+            <li><a href="./Gifts.html">gifts</a></li>
+            <li><a href="./Home.html#about">about</a></li>
+            <li><a href="./Home.html#best">best</a></li>
+            <li><a href="./Home.html#contacts">contacts</a></li>
           </ul>
         </nav>
       </header>
 
       <main class="main">
         <section class="gifts wrapper">
-          <div class="gifts__banner">
+          <div class="gifts_content">
             <p class="caption item">Merry Christmas</p>
             <h1 class="header_1 item">
               GIFT YOURSELF THE MAGIC OF NEW POSSIBILITIES
             </h1>
-            <button class="black_button header_4 item">
+            <a class="gifts_button header_4 item" href="./Gifts.html">
               EXPLORE MAGICAL GIFTS
-            </button>
+            </a>
             <p class="caption">and Happy New Year.</p>
           </div>
         </section>
 
-        <section class="about__us wrapper">
-          <div class="about__us_banner">
-            <div class="about__us_info">
+        <section id="about" class="about wrapper">
+          <div class="about_container">
+            <div class="about_content">
               <div>
                 <p class="caption item">about</p>
                 <h2 class="header_2 item">Unleash your inner superhero!</h2>
@@ -62,34 +55,34 @@
               </div>
             </div>
             <img
-              src="/img/img-compressed/img-compressed/santa.png"
+              src="../img/img-compressed/img-compressed/santa.png"
               alt="santa" />
           </div>
         </section>
 
-        <section class="become__happier wrapper">
-          <div class="become__happier_content">
+        <section class="slider wrapper">
+          <div class="slider_content">
             <p class="caption">Become Happier!</p>
             <h2 class="header_2 item">in the new 2025</h2>
             <div class="ticker slider_text item">
               <p>live</p>
               <img
-                src="/img/img-compressed/img-compressed/snowman.png"
+                src="../img/img-compressed/img-compressed/snowman.png"
                 alt="snowman" />
               <p>create</p>
               <img
-                src="/img/img-compressed/img-compressed/christmas-trees.png"
+                src="../img/img-compressed/img-compressed/christmas-trees.png"
                 alt="christmas-trees" />
               <p>love</p>
               <img
-                src="/img/img-compressed/img-compressed/christmas-tree-ball.png"
+                src="../img/img-compressed/img-compressed/christmas-tree-ball.png"
                 alt="christmas-tree-ball" />
               <p>dream</p>
               <img
-                src="/img/img-compressed/img-compressed/fairytale-house.png"
+                src="../img/img-compressed/img-compressed/fairytale-house.png"
                 alt="fairytale-house" />
             </div>
-            <div class="buttoms">
+            <div class="buttons">
               <button>
                 <svg width="14" height="13" viewBox="0 0 14 13">
                   <path d="M13 6.5H0.5M0.5 6.5L6.5 0.5M0.5 6.5L6.5 12.5" />
@@ -103,13 +96,14 @@
             </div>
           </div>
         </section>
-        <section class="best__gifts wrapper">
+
+        <section id="best" class="best_gifts wrapper">
           <p class="caption item">Best Gifts</p>
           <h2 class="header_2">especially for you</h2>
           <div class="cards">
             <button class="card for_work">
               <img
-                src="/img/img-compressed/img-compressed/gift-for-work.png"
+                src="../img/img-compressed/img-compressed/gift-for-work.png"
                 alt="gift-for-work" />
               <div class="title">
                 <h4 class="header_4">For work</h4>
@@ -118,7 +112,7 @@
             </button>
             <button class="card for_health">
               <img
-                src="/img/img-compressed/img-compressed/gift-for-health.png"
+                src="../img/img-compressed/img-compressed/gift-for-health.png"
                 alt="gift-for-health" />
               <div class="title">
                 <h4 class="header_4">For health</h4>
@@ -127,7 +121,7 @@
             </button>
             <button class="card for_work">
               <img
-                src="/img/img-compressed/img-compressed/gift-for-work.png"
+                src="../img/img-compressed/img-compressed/gift-for-work.png"
                 alt="gift-for-work" />
               <div class="title">
                 <h4 class="header_4">For work</h4>
@@ -136,7 +130,7 @@
             </button>
             <button class="card for_harmony">
               <img
-                src="/img/img-compressed/img-compressed/gift-for-harmony.png"
+                src="../img/img-compressed/img-compressed/gift-for-harmony.png"
                 alt="gift-for-harmony" />
               <div class="title">
                 <h4 class="header_4">For harmony</h4>
@@ -145,15 +139,16 @@
             </button>
           </div>
         </section>
+
         <section class="timer wrapper">
-          <div class="timer_conteiner">
+          <div class="timer_container">
             <div class="timer_content">
               <h2 class="header_2 item">
                 Ready to start your journey to a better version of yourself?
               </h2>
-              <button class="black_button header_4 item">
-                Explore Magical Gifts
-              </button>
+              <a class="gifts_button header_4 item" href="./Gifts.html">
+                EXPLORE MAGICAL GIFTS
+              </a>
               <p class="caption">The New Year is Coming Soon...</p>
               <div class="timer__new_year">
                 <div class="days">
@@ -178,31 +173,31 @@
         </section>
       </main>
 
-      <footer class="footer wrapper">
+      <footer id="contacts" class="footer wrapper">
         <div class="content">
           <div class="contacts">
             <div class="telefon">
-              <img src="/img/santa-claus.svg" alt="santa" />
+              <img src="../img/santa-claus.svg" alt="santa" />
               <h2 class="header_2">+375 (29) 111-22-33</h2>
               <h3 class="header_3">Call Us</h3>
             </div>
             <div class="meet_us">
-              <img src="/img/christmas-tree.svg" alt="christmas-tree" />
+              <img src="../img/christmas-tree.svg" alt="christmas-tree" />
               <h2 class="header_2">Magic forest</h2>
               <h3 class="header_3">meet us</h3>
             </div>
             <div class="email">
-              <img src="/img/snake.svg" alt="snake" />
+              <img src="../img/snake.svg" alt="snake" />
               <h2 class="header_2">gifts@magic.com</h2>
               <h3 class="header_3">write us</h3>
             </div>
           </div>
           <div class="copyright">
             <div class="social_networks">
-              <img src="/img/social_networks/telegram.svg" alt="telegram" />
-              <img src="/img/social_networks/f.svg" alt="facebook" />
-              <img src="/img/social_networks/instagram.svg" alt="instagram" />
-              <img src="/img/social_networks/X.svg" alt="X" />
+              <img src="../img/social_networks/telegram.svg" alt="telegram" />
+              <img src="../img/social_networks/f.svg" alt="facebook" />
+              <img src="../img/social_networks/instagram.svg" alt="instagram" />
+              <img src="../img/social_networks/X.svg" alt="X" />
             </div>
             <p class="paragraph">© Copyright 2025, All Rights Reserved</p>
             <p class="caption">Made in Rolling Scopes School</p>

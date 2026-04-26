@@ -44,6 +44,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 * ::before,
@@ -156,6 +157,12 @@ a, button {
   transition: all 0.4s ease;
 }
 
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+
 .gifts_button,
 .gifts_button:visited {
   display: inline-block;
@@ -205,10 +212,13 @@ a, button {
   border-radius: 12px;
 }
 
-.header_nav a:hover {
-  border-radius: 12px;
+.header_nav a:not(.link_inactive):hover {
   background: var(--primary-10);
   color: var(--primary);
+}
+
+.link_inactive {
+  cursor: default;
 }
 /* header styles end*/
 
@@ -225,12 +235,13 @@ a, button {
   margin-bottom: 60px;
 }
 
-.footer .contacts div {
+.footer .contacts a {
   flex: 1;
   text-align: center;
   padding: 20px;
   border-radius: 20px;
   background-color: var(--content-background);
+  transition: color 0.4s ease;
 }
 
 .copyright {
@@ -243,6 +254,10 @@ a, button {
   display: flex;
   justify-content: center;
   gap: 12px;
+}
+
+.contacts > *:hover {
+  color: var(--primary);
 }
 
 .footer > * > * > *:not(:last-child) {

@@ -29,8 +29,15 @@
   color: var(--static-white);
 }
 
-.filter button:hover,
-.filter button:active {
+.gifts .filter button:hover,
+.gifts .filter button:active {
+  background: var(--static-white-20);
+}
+
+
+.gifts .filter button.active {
+  pointer-events: none;
+  cursor: default;
   background: var(--static-white-20);
 }
 

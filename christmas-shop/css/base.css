@@ -1,31 +1,31 @@
 /* montserrat-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/montserrat-v31-latin/montserrat-v31-latin-regular.woff2')
-    format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    format('woff2');
 }
 
 /* montserrat-600 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   src: url('../fonts/montserrat-v31-latin/montserrat-v31-latin-600.woff2')
-    format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    format('woff2');
 }
 
 /* allura-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: 'Allura';
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/allura-v23-latin/allura-v23-latin-regular.woff2')
-    format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    format('woff2');
 }
 
 :root {
@@ -42,14 +42,15 @@
   --overlay: rgba(24, 28, 41, 0.8);
 }
 
+/* =============== base styles start ================= */
 html {
-  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-* ::before,
-* ::after {
-  box-sizing: inherit;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 * {
@@ -57,6 +58,7 @@ html {
   padding: 0;
 }
 
+/* font styles start */
 .header_1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 32px;
@@ -132,37 +134,31 @@ html {
   font-weight: 600;
   text-transform: uppercase;
 }
+/* font styles end */
 
-body {
-  font-family: var(--font-family);
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1.2;
-  font-weight: 600;
-  color: var(--dark);
-}
-
+/* all containers styles start */
 .wrapper_site {
   margin: 0 auto;
   max-width: 1440px;
 }
 
 .wrapper {
-  padding: 60px 82px;
-  background-image: url(../img/img-compressed/img-compressed/bg-snow.png);
-  background-size: 1440px;
+  display: flex;
+  padding: 60px 8px;
+  justify-content: center;
+  background: url(../img/img-compressed/img-compressed/bg-snow.png) no-repeat
+    center;
+  background-size: cover;
 }
 
-a, button {
-  transition: all 0.4s ease;
+.container {
+  max-width: 1276px;
+  width: 100%;
+  margin: 0 auto;
 }
+/* all containers styles end */
 
-a {
-  color: var(--dark);
-  text-decoration: none;
-}
-
-
+/* gifts button style start*/
 .gifts_button,
 .gifts_button:visited {
   display: inline-block;
@@ -173,15 +169,73 @@ a {
   text-decoration: none;
   background-color: var(--dark);
   color: var(--static-white);
+  transition: all 0.4s ease;
 }
 
 .gifts_button:hover {
   background-color: var(--static-white);
   color: var(--dark);
 }
+/* gifts button style end*/
 
-/* header styles start*/
+/* gifts cards style start*/
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  border-radius: 20px;
+  text-align: start;
+  cursor: pointer;
+  background: var(--content-background);
+  color: var(--dark);
+}
+
+.card .title {
+  flex: 1;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--static-white);
+}
+
+.card .header_4 {
+  margin-bottom: 8px;
+}
+
+.card .header_3 {
+  transition: all 0.4s ease;
+}
+
+.card:hover .header_3 {
+  color: var(--primary);
+}
+
+.card.for_work .header_4 {
+  color: var(--tag-purple);
+}
+
+.card.for_harmony .header_4 {
+  color: var(--tag-green);
+}
+
+.card.for_health .header_4 {
+  color: var(--tag-pink);
+}
+/* gifts cards style end*/
+/* =============== base styles start ================= */
+
+/* ============= header styles start ================= */
 .header {
+  padding: 0 8px;
+}
+
+.header_content {
   display: flex;
   justify-content: space-between;
   padding-block: 12px;
@@ -192,6 +246,7 @@ a {
 .header a:visited {
   text-decoration: none;
   color: var(--dark);
+  transition: all 0.4s ease;
 }
 
 .header_logo a {
@@ -220,19 +275,54 @@ a {
 .link_inactive {
   cursor: default;
 }
-/* header styles end*/
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  flex-direction: column;
+}
+
+.nav_btn {
+  display: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.nav_btn svg {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.nav_btn svg path {
+  stroke: var(--dark);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+/* ============= header styles end ================= */
 
 .main {
   background-color: var(--primary);
   border-radius: 20px;
 }
 
-/* footer style start */
+/* ============= footer styles start =============== */
 .footer .contacts {
   display: flex;
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 60px;
+}
+
+.footer a {
+  color: var(--dark);
+  text-decoration: none;
 }
 
 .footer .contacts a {
@@ -256,11 +346,60 @@ a {
   gap: 12px;
 }
 
-.contacts > *:hover {
+.footer .contacts a:hover {
   color: var(--primary);
 }
 
-.footer > * > * > *:not(:last-child) {
+.footer .social_links {
+  display: flex;
+  gap: 8px;
+}
+
+.footer .social_link {
+  display: inline-block;
+  padding: 8px;
+}
+
+.footer .social_link svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: none;
+}
+
+.footer .social_link path {
+  stroke: #181c29;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.4s ease;
+}
+
+.footer .social_link:hover path {
+  stroke: var(--primary);
+}
+
+.footer .copyright > *:not(:last-child) {
   margin-bottom: 12px;
 }
-/* footer style end */
+/* ============= footer styles start ================= */
+
+@media (max-width: 1040px) {
+  .footer .contacts {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .nav_btn {
+    display: flex;
+  }
+
+  .mobile-nav.active {
+    display: flex;
+  }
+}

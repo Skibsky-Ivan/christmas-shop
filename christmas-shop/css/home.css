@@ -1,29 +1,30 @@
-/* gifts styles start*/
-.gifts {
+/* ===================== hero styles start ===================   */
+.hero {
   display: flex;
   justify-content: center;
   align-items: center;
   background:
     url(../img/img-compressed/img-compressed/bg-snow.png) no-repeat,
     url(../img/img-compressed/img-compressed/bg-ball.png) no-repeat;
-  background-size: 1440px;
-  background-position: 0 -40px;
+  background-size: cover, cover;
+  background-position: center -40px;
   color: var(--static-white);
 }
 
-.gifts_content {
+.hero_content {
   max-width: 426px;
   padding: 60px 0;
   text-align: center;
+  margin: 0 auto;
 }
 
-.gifts_content .caption {
+.hero_content .caption {
   margin-bottom: 20px;
 }
-/* gifts styles end*/
+/* ===================== hero styles end ====================== */
 
-/* about__us style start */
-.about_container {
+/* ==================== about styles start ==================== */
+.about .container {
   display: flex;
   align-items: center;
   border-radius: 20px;
@@ -31,7 +32,7 @@
 }
 
 .about_content {
-  flex: 1;
+  width: 50%;
   padding: 0px 60px;
 }
 
@@ -48,15 +49,26 @@
   margin-bottom: 20px;
 }
 
-.about_container img {
+.about_img {
+  width: 50%;
+  overflow: hidden;
+  position: relative;
   border-radius: 20px;
 }
-/* about__us style end */
 
-/* become__happier style start */
+.about_img img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+}
+/* ==================== about styles end ==================== */
+
+/* ================= slider styles start ==================== */
 .slider {
   text-align: center;
   color: var(--static-white);
+  overflow: hidden;
 }
 
 .slider .caption {
@@ -89,6 +101,7 @@
   background: none;
   cursor: pointer;
   border: 1px solid var(--static-white-40);
+  transition: all 0.4s ease;
 }
 
 .slider .buttons svg {
@@ -120,70 +133,24 @@
 .slider .item {
   margin-bottom: 20px;
 }
-/* become__happier style end */
+/* ================= slider styles end ==================== */
 
-/* best_gifts style start */
-.best_gifts {
+/* ================= gifts styles start =================== */
+.gifts {
   text-align: center;
   color: var(--static-white);
 }
 
-.best_gifts .caption {
+.gifts .caption {
   margin-bottom: 12px;
 }
-.best_gifts .header_2 {
+
+.gifts .header_2 {
   margin-bottom: 20px;
 }
+/* ================= gifts styles end =================== */
 
-.cards {
-  display: flex;
-  justify-content: space-between;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 310px;
-  border-radius: 20px;
-  text-align: start;
-  cursor: pointer;
-  background: var(--content-background);
-  color: var(--dark);
-}
-
-.card .title {
-  flex: 1;
-  padding: 20px;
-  border-radius: 20px;
-  background-color: var(--static-white);
-}
-
-.card .header_4 {
-  margin-bottom: 8px;
-}
-
-.card .header_3 {
-  transition: all 0.4s ease;
-}
-
-.card:hover .header_3 {
-  color: var(--primary);
-}
-
-.card.for_work .header_4 {
-  color: var(--tag-purple);
-}
-
-.card.for_harmony .header_4 {
-  color: var(--tag-green);
-}
-
-.card.for_health .header_4 {
-  color: var(--tag-pink);
-}
-/* best_gifts style end */
-
-/* new_year_timer style start */
+/* =============== timer styles start =================== */
 .timer {
   display: flex;
   justify-content: center;
@@ -191,18 +158,20 @@
   background:
     url(../img/img-compressed/img-compressed/bg-snow.png) no-repeat,
     url(../img/img-compressed/img-compressed/bg-forest.png) no-repeat;
-  background-size: 1440px;
-  background-position: 0 1px;
+  background-size: cover, cover;
+  background-position: center 1px;
   color: var(--static-white);
 }
 
-.timer_container {
+.timer .container {
+  display: flex;
   padding: 60px 0;
+  justify-content: center;
 }
 
 .timer_content {
-  padding: 60px 0;
   text-align: center;
+  padding: 60px 0;
   max-width: 426px;
 }
 
@@ -217,7 +186,6 @@
 
 .timer__new_year div {
   width: 80px;
-  height: 52px;
   position: relative;
 }
 
@@ -233,4 +201,32 @@
 .timer .caption {
   margin-bottom: 8px;
 }
-/* timer__new_year style end */
+/* =============== timer styles end =================== */
+
+@media (max-width: 700px) {
+  .about .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about_content {
+    width: 100%;
+    padding: 0px 20px;
+  }
+
+  .about_img {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+  }
+
+  .about_img img {
+    width: auto;
+    min-width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+  }
+}

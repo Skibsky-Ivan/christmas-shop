@@ -19,36 +19,32 @@
               </a>
             </div>
 
-            <!-- Десктопная навигация (>768px) -->
-            <nav class="header_nav desktop-nav">
+            <nav class="desktop_nav">
               <ul>
-                <li><a class="link_inactive" href="./Gifts.html">gifts</a></li>
+                <li><a href="./Gifts.html">gifts</a></li>
                 <li><a href="./Home.html#about">about</a></li>
-                <li><a href="./Home.html#best">best</a></li>
-                <li><a href="./Home.html#contacts">contacts</a></li>
+                <li><a href="./Home.html#gifts">best</a></li>
+                <li><a href="#contacts">contacts</a></li>
               </ul>
             </nav>
 
             <!-- Бургер-кнопка (<=768px) -->
-            <button class="nav_btn">
-              <svg viewBox="0 0 40 40">
-                <path d="M10 16H30" />
-                <path d="M10 24H30" />
-              </svg>
-            </button>
+            <div class="burger_menu">
+              <div></div>
+              <div></div>
+            </div>
           </div>
-
-          <!-- Мобильная навигация (<=768px) -->
-          <nav class="header_nav mobile-nav">
-            <ul>
-              <li><a class="link_inactive" href="./Gifts.html">gifts</a></li>
-              <li><a href="./Home.html#about">about</a></li>
-              <li><a href="./Home.html#best">best</a></li>
-              <li><a href="./Home.html#contacts">contacts</a></li>
-            </ul>
-          </nav>
         </div>
       </header>
+
+      <div class="mobile_menu action_large">
+        <nav class="mobile_nav">
+          <a href="./Gifts.html">gifts</a>
+          <a href="./Home.html#about">about</a>
+          <a href="./Home.html#gifts">best</a>
+          <a href="#contacts">contacts</a>
+        </nav>
+      </div>
 
       <main class="main">
         <section class="gifts wrapper">
@@ -59,116 +55,7 @@
             <li><button class="header_4">for health</button></li>
             <li><button class="header_4">for harmony</button></li>
           </ul>
-          <div class="cards">
-            <div class="card for_work">
-              <img
-                src="../img/img-compressed/img-compressed/gift-for-work.png"
-                alt="gift-for-work" />
-              <div class="title">
-                <p class="header_4">For work</p>
-                <p class="header_3">Console.log Guru</p>
-              </div>
-            </div>
-            <div class="card for_health">
-              <img
-                src="../img/img-compressed/img-compressed/gift-for-health.png"
-                alt="gift-for-health" />
-              <div class="title">
-                <p class="header_4">For health</p>
-                <p class="header_3">Hydration Bot</p>
-              </div>
-            </div>
-            <div class="card for_work">
-              <img
-                src="../img/img-compressed/img-compressed/gift-for-work.png"
-                alt="gift-for-work" />
-              <div class="title">
-                <p class="header_4">For work</p>
-                <p class="header_3">Merge Master</p>
-              </div>
-            </div>
-            <div class="card for_harmony">
-              <img
-                src="../img/img-compressed/img-compressed/gift-for-harmony.png"
-                alt="gift-for-harmony" />
-              <div class="title">
-                <p class="header_4">For harmony</p>
-                <p class="header_3">Spontaneous Coding Philosopher</p>
-              </div>
-            </div>
-            <div class="card for_work">
-              <img
-                src="../img/img-compressed/img-compressed/gift-for-work.png"
-                alt="gift-for-work" />
-              <div class="title">
-                <p class="header_4">For work</p>
-                <p class="header_3">bug magnet</p>
-              </div>
-            </div>
-            <div class="card for_harmony">
-              <img
-                src="../img/img-compressed/img-compressed/gift-for-harmony.png"
-                alt="gift-for-harmony" />
-              <div class="title">
-                <p class="header_4">For harmony</p>
-                <p class="header_3">Joy Charger</p>
-              </div>
-            </div>
-            <div class="card for_health">
-              <img
-                src="../img/img-compressed/img-compressed/gift-for-health.png"
-                alt="gift-for-health" />
-              <div class="title">
-                <p class="header_4">For health</p>
-                <p class="header_3">Step Master</p>
-              </div>
-            </div>
-            <div class="card for_harmony">
-              <img
-                src="../img/img-compressed/img-compressed/gift-for-harmony.png"
-                alt="gift-for-harmony" />
-              <div class="title">
-                <p class="header_4">For harmony</p>
-                <p class="header_3">Bug Acceptance Guru</p>
-              </div>
-            </div>
-            <div class="card for_work">
-              <img
-                src="../img/img-compressed/img-compressed/gift-for-work.png"
-                alt="gift-for-work" />
-              <div class="title">
-                <p class="header_4">For work</p>
-                <p class="header_3">Shortcut Cheater</p>
-              </div>
-            </div>
-            <div class="card for_health">
-              <img
-                src="../img/img-compressed/img-compressed/gift-for-health.png"
-                alt="gift-for-health" />
-              <div class="title">
-                <p class="header_4">For health</p>
-                <p class="header_3">Posture Levitation</p>
-              </div>
-            </div>
-            <div class="card for_harmony">
-              <img
-                src="../img/img-compressed/img-compressed/gift-for-harmony.png"
-                alt="gift-for-harmony" />
-              <div class="title">
-                <p class="header_4">For harmony</p>
-                <p class="header_3">Error Laugher</p>
-              </div>
-            </div>
-            <div class="card for_health">
-              <img
-                src="../img/img-compressed/img-compressed/gift-for-health.png"
-                alt="gift-for-health" />
-              <div class="title">
-                <p class="header_4">For health</p>
-                <p class="header_3">Snack Resister</p>
-              </div>
-            </div>
-          </div>
+          <div class="cards"></div>
         </section>
       </main>
 
@@ -237,5 +124,8 @@
         </div>
       </footer>
     </div>
+
+    <script src="../js/base.js"></script>
+    <script src="../js/gifts.js" type="module"></script>
   </body>
 </html>

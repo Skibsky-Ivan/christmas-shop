@@ -19,36 +19,32 @@
               </a>
             </div>
 
-            <!-- Десктопная навигация (>768px) -->
-            <nav class="header_nav desktop-nav">
+            <nav class="desktop_nav">
               <ul>
                 <li><a href="./Gifts.html">gifts</a></li>
-                <li><a href="./Home.html#about">about</a></li>
-                <li><a href="./Home.html#best">best</a></li>
-                <li><a href="./Home.html#contacts">contacts</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#gifts">best</a></li>
+                <li><a href="#contacts">contacts</a></li>
               </ul>
             </nav>
 
             <!-- Бургер-кнопка (<=768px) -->
-            <button class="nav_btn">
-              <svg viewBox="0 0 40 40">
-                <path d="M10 16H30" />
-                <path d="M10 24H30" />
-              </svg>
-            </button>
+            <div class="burger_menu">
+              <div></div>
+              <div></div>
+            </div>
           </div>
-
-          <!-- Мобильная навигация (<=768px) -->
-          <nav class="header_nav mobile-nav">
-            <ul>
-              <li><a href="./Gifts.html">gifts</a></li>
-              <li><a href="./Home.html#about">about</a></li>
-              <li><a href="./Home.html#best">best</a></li>
-              <li><a href="./Home.html#contacts">contacts</a></li>
-            </ul>
-          </nav>
         </div>
       </header>
+
+      <div class="mobile_menu action_large">
+        <nav class="mobile_nav">
+          <a href="./Gifts.html">gifts</a>
+          <a href="#about">about</a>
+          <a href="#gifts">best</a>
+          <a href="#contacts">contacts</a>
+        </nav>
+      </div>
 
       <main class="main">
         <section class="hero wrapper">
@@ -111,12 +107,12 @@
                   alt="fairytale-house" />
               </div>
               <div class="buttons">
-                <button>
+                <button class="left_button">
                   <svg width="14" height="13" viewBox="0 0 14 13">
                     <path d="M13 6.5H0.5M0.5 6.5L6.5 0.5M0.5 6.5L6.5 12.5" />
                   </svg>
                 </button>
-                <button>
+                <button class="right_button">
                   <svg width="14" height="13" viewBox="0 0 14 13">
                     <path d="M0.5 6.5H13M13 6.5L7 0.5M13 6.5L7 12.5" />
                   </svg>
@@ -126,49 +122,12 @@
           </div>
         </section>
 
-        <section id="difts" class="gifts wrapper">
+        <section id="gifts" class="gifts wrapper">
           <div class="container">
             <div class="gifts_content">
-              <p class="caption item">Best Gifts</p>
+              <p class="caption">Best Gifts</p>
               <h2 class="header_2">especially for you</h2>
-              <div class="cards">
-                <div class="card for_work">
-                  <img
-                    src="../img/img-compressed/img-compressed/gift-for-work.png"
-                    alt="gift-for-work" />
-                  <div class="title">
-                    <p class="header_4">For work</p>
-                    <p class="header_3">Console.log Guru</p>
-                  </div>
-                </div>
-                <div class="card for_health">
-                  <img
-                    src="../img/img-compressed/img-compressed/gift-for-health.png"
-                    alt="gift-for-health" />
-                  <div class="title">
-                    <p class="header_4">For health</p>
-                    <p class="header_3">Step Master</p>
-                  </div>
-                </div>
-                <div class="card for_work">
-                  <img
-                    src="../img/img-compressed/img-compressed/gift-for-work.png"
-                    alt="gift-for-work" />
-                  <div class="title">
-                    <p class="header_4">For work</p>
-                    <p class="header_3">Merge Master</p>
-                  </div>
-                </div>
-                <div class="card for_harmony">
-                  <img
-                    src="../img/img-compressed/img-compressed/gift-for-harmony.png"
-                    alt="gift-for-harmony" />
-                  <div class="title">
-                    <p class="header_4">For harmony</p>
-                    <p class="header_3">Spontaneous Coding Philosopher</p>
-                  </div>
-                </div>
-              </div>
+              <div class="cards"></div>
             </div>
           </div>
         </section>
@@ -185,19 +144,19 @@
               <p class="caption">The New Year is Coming Soon...</p>
               <div class="timer__new_year">
                 <div class="days">
-                  <span class="header_2">47</span>
+                  <span class="timer_item header_2">0</span>
                   <p class="header_4">days</p>
                 </div>
                 <div class="hours">
-                  <span class="header_2">5</span>
+                  <span class="timer_item header_2">0</span>
                   <p class="header_4">hours</p>
                 </div>
                 <div class="minutes">
-                  <span class="header_2">34</span>
+                  <span class="timer_item header_2">0</span>
                   <p class="header_4">minutes</p>
                 </div>
                 <div class="seconds">
-                  <span class="header_2">12</span>
+                  <span class="timer_item header_2">0</span>
                   <p class="header_4">seconds</p>
                 </div>
               </div>
@@ -271,5 +230,9 @@
         </div>
       </footer>
     </div>
+
+
+    <script src="../js/base.js"></script>
+    <script src="../js/home.js" type="module"></script>
   </body>
 </html>

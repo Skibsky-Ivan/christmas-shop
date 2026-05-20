@@ -58,6 +58,10 @@ html {
   padding: 0;
 }
 
+body.no_scroll {
+  overflow: hidden;
+}
+
 /* font styles start */
 .header_1 {
   font-family: 'Montserrat', sans-serif;
@@ -172,9 +176,11 @@ html {
   transition: all 0.4s ease;
 }
 
-.gifts_button:hover {
-  background-color: var(--static-white);
-  color: var(--dark);
+@media (hover: hover) {
+  .gifts_button:hover {
+    background-color: var(--static-white);
+    color: var(--dark);
+  }
 }
 /* gifts button style end*/
 
@@ -204,27 +210,30 @@ html {
   background-color: var(--static-white);
 }
 
-.card .header_4 {
+.card .category {
   margin-bottom: 8px;
 }
 
-.card .header_3 {
+.card .name {
   transition: all 0.4s ease;
+  margin-bottom: 22px;
 }
 
-.card:hover .header_3 {
-  color: var(--primary);
+@media (hover: hover) {
+  .card:hover .header_3 {
+    color: var(--primary);
+  }
 }
 
-.card.for_work .header_4 {
+.card.for-work .category {
   color: var(--tag-purple);
 }
 
-.card.for_harmony .header_4 {
+.card.for-harmony .category {
   color: var(--tag-green);
 }
 
-.card.for_health .header_4 {
+.card.for-health .category {
   color: var(--tag-pink);
 }
 /* gifts cards style end*/
@@ -256,55 +265,97 @@ html {
   padding: 8px 20px;
 }
 
-.header_nav ul {
+.desktop_nav ul {
   display: flex;
   gap: 8px;
   list-style: none;
 }
 
-.header_nav a {
+.desktop_nav a {
   padding: 12px 20px;
   border-radius: 12px;
 }
 
-.header_nav a:not(.link_inactive):hover {
-  background: var(--primary-10);
-  color: var(--primary);
+@media (hover: hover) {
+  .desktop_nav a:not(.link_inactive):hover {
+    background: var(--primary-10);
+    color: var(--primary);
+  }
 }
 
 .link_inactive {
   cursor: default;
 }
 
-.mobile-nav {
+/* burger_menu */
+.burger_menu {
   display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: white;
-  flex-direction: column;
-}
-
-.nav_btn {
-  display: none;
-  cursor: pointer;
-  border: none;
-  background: none;
-}
-
-.nav_btn svg {
   width: 40px;
   height: 40px;
-  display: block;
+  position: relative;
+  cursor: pointer;
 }
 
-.nav_btn svg path {
-  stroke: var(--dark);
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.burger_menu div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 1px;
+  border-radius: 10px;
+  background-color: var(--dark);
+  transition: transform 0.5s;
 }
+
+.burger_menu div:first-child {
+  transform: translateX(-50%) translateY(4px);
+}
+
+.burger_menu div:last-child {
+  transform: translateX(-50%) translateY(-4px);
+}
+
+.burger_menu.active div:first-child {
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.burger_menu.active div:last-child {
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+/* mobile_menu */
+.mobile_menu {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  transform: translateX(100%);
+  background-color: var(--static-white);
+  transition: transform 0.5s;
+}
+
+.mobile_menu.active {
+  transform: translateX(0);
+}
+
+.mobile_nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--dark);
+}
+
+.mobile_nav a {
+  border-radius: 12px;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: var(--dark);
+}
+
 /* ============= header styles end ================= */
 
 .main {
@@ -346,8 +397,10 @@ html {
   gap: 12px;
 }
 
-.footer .contacts a:hover {
-  color: var(--primary);
+@media (hover: hover) {
+  .footer .contacts a:hover {
+    color: var(--primary);
+  }
 }
 
 .footer .social_links {
@@ -375,14 +428,16 @@ html {
   transition: stroke 0.4s ease;
 }
 
-.footer .social_link:hover path {
-  stroke: var(--primary);
+@media (hover: hover) {
+  .footer .social_link:hover path {
+    stroke: var(--primary);
+  }
 }
 
 .footer .copyright > *:not(:last-child) {
   margin-bottom: 12px;
 }
-/* ============= footer styles start ================= */
+/* ============= footer styles end ================= */
 
 @media (max-width: 1040px) {
   .footer .contacts {
@@ -391,15 +446,15 @@ html {
 }
 
 @media (max-width: 768px) {
-  .desktop-nav {
+  .desktop_nav {
     display: none;
   }
 
-  .nav_btn {
-    display: flex;
+  .burger_menu {
+    display: block;
   }
 
-  .mobile-nav.active {
+  .mobile_menu {
     display: flex;
   }
 }

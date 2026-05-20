@@ -6,7 +6,8 @@
   text-align: center;
   gap: 20px;
   color: var(--static-white);
-  background: url(../img/img-compressed/img-compressed/bg-garland.png) no-repeat top center;
+  background: url(../img/img-compressed/img-compressed/bg-garland.png) no-repeat
+    top center;
   background-size: 100% auto;
 }
 
@@ -31,9 +32,11 @@
   transition: all 0.4s ease;
 }
 
-.gifts .filter button:hover,
-.gifts .filter button:active {
-  background: var(--static-white-20);
+@media (hover: hover) {
+  .gifts .filter button:hover,
+  .gifts .filter button:active {
+    background: var(--static-white-20);
+  }
 }
 
 .gifts .filter button.active {

@@ -31,5 +31,20 @@ mobileMenuLinks.forEach((link) => {
 // =================== burger menu end script ======================
 
 // ============== Scroll-to-Top button start script ================
+const scrollToTop = document.querySelector('.scroll_to_top');
 
+window.addEventListener('scroll', () => {
+  if (window.innerWidth <= 768 && window.pageYOffset > 0) {
+    scrollToTop.classList.add('show');
+  } else {
+    scrollToTop.classList.remove('show');
+  }
+});
+
+scrollToTop.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
 // ============== Scroll-to-Top button end script =--===============

@@ -439,6 +439,37 @@ body.no_scroll {
 }
 /* ============= footer styles end ================= */
 
+/* ===== Scroll-to-Top button styles start ======== */
+.scroll_to_top {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  transform: translateY(120%);
+  background-color: var(--static-white);
+  border: 1px solid var(--primary);
+  border-radius: 100%;
+  z-index: 1000;
+  transition: transform 0.4s ease;
+}
+
+.scroll_to_top svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+}
+
+.scroll_to_top path {
+  stroke: #ff4646;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+/* ======= Scroll-to-Top button end start ========= */
+
 @media (max-width: 1040px) {
   .footer .contacts {
     flex-direction: column;
@@ -456,5 +487,10 @@ body.no_scroll {
 
   .mobile_menu {
     display: flex;
+  }
+
+  .scroll_to_top.show {
+    display: flex;
+    transform: translateY(0);
   }
 }

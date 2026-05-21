@@ -34,8 +34,8 @@ const filterCards = filterArray(gifts, initialCategory);
 
 createListCards(filterCards);
 
-categoryButton.forEach((button) => {
-  button.addEventListener('click', (event) => {
+categoryButton.forEach((botton) => {
+  botton.addEventListener('click', (event) => {
     giftsElement.querySelector('.active').classList.remove('active');
     event.target.classList.add('active');
 

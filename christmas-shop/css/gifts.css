@@ -1,0 +1,60 @@
+/* ================== gifts style start ================= */
+.gifts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  color: var(--static-white);
+  background: url(../img/img-compressed/img-compressed/bg-garland.png) no-repeat
+    top center;
+  background-size: 100% auto;
+}
+
+.gifts .header_1 {
+  max-width: 426px;
+  text-align: center;
+}
+
+.gifts .filter {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+
+.gifts .filter button {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: var(--static-white);
+  transition: all 0.4s ease;
+}
+
+.gifts .filter button:active {
+  background: var(--static-white-20);
+}
+
+@media (hover: hover) {
+  .gifts .filter button:hover {
+    background: var(--static-white-20);
+  }
+}
+
+.gifts .filter button.active {
+  pointer-events: none;
+  cursor: default;
+  background: var(--static-white-20);
+}
+/* ================== gifts style end ================= */
+
+@media (max-width: 500px) {
+  .gifts .filter {
+    gap: 0;
+  }
+
+  .gifts .filter button {
+    padding: 12px 8px;
+  }
+}

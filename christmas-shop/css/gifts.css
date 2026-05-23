@@ -32,9 +32,12 @@
   transition: all 0.4s ease;
 }
 
+.gifts .filter button:active {
+  background: var(--static-white-20);
+}
+
 @media (hover: hover) {
-  .gifts .filter button:hover,
-  .gifts .filter button:active {
+  .gifts .filter button:hover {
     background: var(--static-white-20);
   }
 }

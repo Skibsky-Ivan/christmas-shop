@@ -4,8 +4,8 @@
 import { gifts } from './all_gifts.js';
 
 const giftsElement = document.querySelector('.gifts');
-const cards = giftsElement.querySelector('.cards');
-const categoryButton = giftsElement.querySelectorAll('.filter button');
+const cardsContainer = giftsElement.querySelector('.cards');
+const filterContainer = giftsElement.querySelector('.filter'); 
 
 function filterArray(array, categoryName) {
   if (categoryName === 'all') return array;
@@ -13,10 +13,10 @@ function filterArray(array, categoryName) {
 }
 
 function createListCards(array) {
-  cards.innerHTML = array
+  cardsContainer.innerHTML = array
     .map((card) => {
       const categoryNew = card.category.toLowerCase().split(' ').join('-');
-      return `<div class="card ${categoryNew}">
+      return `<div class="card ${categoryNew}" data-name="${card.name}">
         <img
           src="../img/img-compressed/img-compressed/gift-${categoryNew}.png"
           alt="gift-${categoryNew}" />
@@ -29,20 +29,26 @@ function createListCards(array) {
     .join('');
 }
 
-const initialCategory = giftsElement.querySelector('.active').innerHTML.toLowerCase();
-const filterCards = filterArray(gifts, initialCategory);
+const activeBtn = giftsElement.querySelector('.filter .active');
+if (activeBtn) {
+  const initialCategory = activeBtn.innerHTML.toLowerCase();
+  const filterCards = filterArray(gifts, initialCategory);
+  createListCards(filterCards);
+}
 
-createListCards(filterCards);
+function chooseCategory(event) {
+  const clickedButton = event.target.closest('button');
+  if (!clickedButton) return;
 
-categoryButton.forEach((botton) => {
-  botton.addEventListener('click', (event) => {
-    giftsElement.querySelector('.active').classList.remove('active');
-    event.target.classList.add('active');
+  giftsElement.querySelector('.filter .active').classList.remove('active');
+  clickedButton.classList.add('active');
 
-    const clickedCategory = event.target.innerHTML.toLowerCase();
+  const clickedCategory = clickedButton.textContent.trim().toLowerCase();
+  const filterCards = filterArray(gifts, clickedCategory);
+  createListCards(filterCards);
+}
 
-    const filterCards = filterArray(gifts, clickedCategory);
-    createListCards(filterCards);
-  });
-});
+if (filterContainer) {
+  filterContainer.addEventListener('click', chooseCategory);
+}
 // =========== Category switching in Gifts end sctipt =============

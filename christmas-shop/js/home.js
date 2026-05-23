@@ -117,7 +117,7 @@ function createListCardsText(array, numberCards) {
   for (let i = 0; i < numberCards; ++i) {
     const card = array[i];
     const categoryNew = card.category.toLowerCase().split(' ').join('-');
-    listCards += `<div class="card ${categoryNew}">
+    listCards += `<div class="card" data-name="${card.name}" data-category="${categoryNew}">
         <img
           src="../img/img-compressed/img-compressed/gift-${categoryNew}.png"
           alt="gift-${categoryNew}" />

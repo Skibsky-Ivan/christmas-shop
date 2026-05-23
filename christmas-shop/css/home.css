@@ -107,11 +107,8 @@
   transition: all 0.4s ease;
 }
 
-.slider .buttons svg {
-  stroke: var(--static-white-40);
-}
-
 .slider .buttons path {
+  stroke: var(--static-white-40);
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -214,7 +211,6 @@
 
 @media (max-width: 700px) {
   .about .container {
-    display: flex;
     flex-direction: column;
   }
 
@@ -225,17 +221,10 @@
 
   .about_img {
     width: 100%;
-    overflow: hidden;
-    position: relative;
-    border-radius: 20px;
   }
 
   .about_img img {
     width: auto;
     min-width: 100%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
   }
 }
